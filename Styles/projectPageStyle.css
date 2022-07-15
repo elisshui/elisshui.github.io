@@ -1,0 +1,258 @@
+h1 { /*Page Title*/
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+}
+
+/*whole page container style*/
+.projectContainer {
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 60px;
+}
+.projectContainer p {  /*body text*/
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777 !important;
+}
+.projectContainer h2 {  /*used for section headings*/
+    font: 400 15px/1.8 Lato, sans-serif;
+    font-size: 20px;
+    color: #777;  
+    font-weight: bold;
+    text-align: left;
+}
+@media (max-width: 991px){
+    .projectContainer p, .projectContainer {
+        font-size: 14px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-bottom: 10px;
+    }
+}
+
+/*project introTextBox*/
+.introTextBox {
+    margin-top:1%;
+    padding-top:3%;
+    padding-bottom:3%;
+    padding-left:3%;
+    padding-right:3%;
+    border-radius:10px;
+    background-color:#f2f2f2;
+    text-align: left;
+}
+
+/*code block style*/
+.codeBlock {
+    background-color: #f2f2f2;
+    border: 1px solid #f3f3f3;
+    display: block;
+    padding: 15px;
+    text-align: left;
+    color: #0F52BA;
+}
+
+/*divider line*/
+.dividerLine {
+    height: 2px;
+    width: 40%;
+    text-align: center;
+    color: #d69027;
+    background-color:#d69027;
+    border-color: #d69027
+}
+
+/*Video Styles*/
+.gameVids {
+    text-align: center;
+    padding-left: 0px;
+}
+
+/*Tabs on navbar*/
+.tab {
+    display: inline-block;
+    margin-left: 100px;
+}
+
+/*navBar style*/
+.navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 1;
+}
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+.navbar-brand:hover {
+    color: #fff !important;
+}
+.navbarPhoneLogo {
+    display: none;
+}
+
+@media (max-width: 991px) { /*tablets*/
+    .navbar-toggle {
+        display: none;
+    }
+    .navbar {
+        width:auto;
+    }
+    .navbarPhoneLogo {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) { /*phones*/
+    .navbar-right, .navbar li a {
+        display: none;
+    }
+    .navbarPhoneLogo {
+        display: inline;
+        float: right;
+    }
+}
+
+/* intro buttons */
+.playGameBtn {
+    position: block;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    color: #2d2d30;
+    margin-top: -12px;
+    margin-left: 93%;
+    align: right !important;
+}
+.playGameBtn:hover {
+    color: #848484;
+}
+@media (max-width: 991px) { /*tablets*/
+    .playGameBtn {
+        position: block;
+        font-size: 30px;
+        border: none;
+        background-color: transparent;
+        color: #2d2d30;
+        margin-top: -14px;
+        margin-left: 88%;
+        text-align: right !important;
+    }
+}
+
+/* home button */
+.homeBtn {
+    position: sticky;
+    bottom: 2%; /*dist from bottom*/
+    left: 100%;
+    margin-bottom: 10px; /*dist from bottom when sticks*/
+
+    border: 6px 2d2d30;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    padding: 2px 7px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 4;
+}
+.homeBtn {
+    border-color: #2d2d30;
+    color: #2d2d30;
+}
+.homeBtn:hover {
+    background-color: #2d2d30;
+    color: white;
+}
+@media (max-width: 1000px){
+    .homeBtn {
+    position: sticky;
+    margin-bottom: 1px;
+    left: 90%;
+    border: 1px 2d2d30 !important;
+    padding: 2px, 7px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    }
+}
+
+/*Large play button at the end of some pages*/
+.largePlayBtn {
+    color: #97979e;
+    background: transparent;
+    border: none;
+    margin-top: -15px;
+    text-align: center;
+
+    font-size: 38px;
+}
+.largePlayBtn:hover {
+    color: #2d2d30;
+}
+
+/*contact container*/
+.container {
+    background:#2d2d30;
+    width:100%;
+}
+.text-left.contactContHeading {
+    letter-spacing: 10px;
+    color: #fff;
+    font-size: 20px;
+    padding-top: 3%;
+    padding-left: 25.5%;
+}
+.text-left.contactDetails {
+    color:#d5d5d5;
+    padding-left:25%;
+    font-size:15px;
+    letter-spacing:0.5px;
+}
+/*logo in contact container*/
+.contactLogo { 
+    position: relative;
+    width: 6%;
+    margin-top: 2%;
+    left: 25%;
+}
+@media (max-width:991px) { /*Tablets and phones*/
+    .contactLogo {
+        display: none;
+    }
+    .text-left.contactDetails, .text-left.contactContHeading {
+        padding-left:15%;
+    }
+}
+
+/*footer style*/
+footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+footer a {
+    color: #f5f5f5;
+}
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}  
+.form-control {
+    border-radius: 0;
+}
+textarea {
+    resize: none;
+}
