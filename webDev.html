@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Eliss H. Hui</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <title>Eliss H. Hui - Personal Website</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,111 +16,15 @@
         <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="Styles/projectPageStyle.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="js/bootstrap-dropdownhover.min.js"></script>
 
+        <script src="Scripts/projectPageScript.js"></script>
+
         <style>
-            body {
-                font: 400 15px/1.8 Lato, sans-serif;
-                color: #777;
-            }
-            h3, h4 {
-                margin: 10px 0 30px 0;
-                letter-spacing: 10px;      
-                font-size: 20px;
-                color: #111;
-            }
-            /*container style*/
-            .projectContainer {
-                padding-right: 100px;
-                padding-left: 100px;
-                padding-top: 60px;
-                padding-bottom: 20px;
-            }
-            .projectContainer p{
-                font: 400 15px/1.8 Lato, sans-serif;
-                color: #777 !important;
-            }
-            @media (max-width: 991px){
-                .projectContainer p, .projectContainer{
-                font-size: 14px;
-                padding-left: 10px;
-                padding-right: 9px;
-                padding-bottom: 10px;
-                }
-            }
-
-            /*navBar style*/
-            .navbar {
-                font-family: Montserrat, sans-serif;
-                margin-bottom: 0;
-                background-color: #2d2d30;
-                border: 0;
-                font-size: 11px !important;
-                letter-spacing: 4px;
-                opacity: 1;
-            }
-            .navbar li a, .navbar .navbar-brand { 
-                color: #d5d5d5 !important;
-            }
-            .navbar-default .navbar-toggle {
-                border-color: transparent;
-            }
-            .navbar-brand:hover {
-                color: #fff !important;
-            }
-
-            /* home button */
-            .homeBtn {
-                position: sticky;
-                top: 100%;
-                left: 100%;
-
-                border: 6px 2d2d30;
-                border-radius: 3px;
-                background-color: white;
-                color: black;
-                padding: 2px 7px;
-                font-family: Montserrat, sans-serif;
-                font-size: 14px;
-                letter-spacing: 4px;
-                font-weight: bold;
-                cursor: pointer;
-                z-index: 4;
-            }
-            .homeBtn {
-                border-color: #2d2d30;
-                color: #2d2d30;
-            }
-            .homeBtn:hover {
-                background-color: #2d2d30;
-                color: white;
-            }
-            @media (max-width: 1000px){
-                .homeBtn {
-                position: sticky;
-                top: 100%;
-                left: 90%;
-                border: 1px 2d2d30 !important;
-                padding: 2px, 7px;
-                font-size: 10px;
-                letter-spacing: 3px;
-                }
-            }
-
-            /*Projects Section Container*/
-            .projectsContainer {
-                padding: 15px 120px;  
-            }
-            @media (max-width: 991px) {
-                .projectsContainer {
-                    padding-top: 22px;
-                    padding-bottom: 25px;
-                    padding-left: 10%;
-                    padding-right: 10%;
-                }
-            }
             /*project dropdown*/
             .dropdown {
                 position: relative;
@@ -159,94 +64,11 @@
                 cursor: pointer;
                 border-radius: 9000px;
                 text-align: center;
-            }
-
-            /*Contact section bg-dark style*/
-            .contactContDark {
-                background: #2d2d30;
-                color: #bdbdbd;
-                width: 100%;
-                padding-top: 20px;
-                padding-bottom: 30px;
-                padding-left: 150px;
-                padding-right: 100px;
-            }
-            .contactContDark h3 {color: #fff;}
-            .contactContDark p {font-style: italic;}
-            @media (max-width: 991px) {
-                .contactLogo {
-                    display: none;
-                }
-                .contactContDark {
-                    width: 100%;
-                    padding-bottom: 0px;
-                    padding-left: 17%;
-                    padding-right: 0%;
-                }
-                .contactContDark p {
-                    font-size: 15px;
-                }
-                .contactContDark h3 {
-                    letter-spacing: 3px;
-                    font-size: 20px;
-                }
-            }
-            /*Logo in Contact Section*/
-            .contactLogo {
-                position: relative;
-                width: 7%;
-                left: 33%;
-            }
-            @media (max-width: 991px){
-                .contactLogo {
-                    display: none;
-                }
-                .container {
-                    width: 100%;
-                    padding-bottom: 5px;
-                    padding-left: 17%;
-                    padding-right: 0%;
-                }
-                .container p {
-                    font-size: 15px;
-                }
-                .container h3 {
-                    color: #2d2d30;
-                    letter-spacing: 3px;
-                    font-size: 20px;
-                }
-            }
-
-            /*footer style*/
-            footer {
-                background-color: #2d2d30;
-                color: #f5f5f5;
-                padding: 5px;
-                position: relative;
-                bottom: 0;
-                width: 100%;
-            }
-            footer h3, p{
-                color: #f5f5f5 !important;
-            }
-            footer a {
-                color: #f5f5f5;
-            }
-            footer a:hover {
-                color: #777;
-                text-decoration: none;
             }  
-            .form-control {
-                border-radius: 0;
-            }
-            textarea {
-                resize: none;
-            }
         </style>
     </head>
 
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
         <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -258,130 +80,139 @@
             <a class="navbar-brand" href="index.html">
                 Eliss H. Hui
             </a>
+            <span style="float:right;">
+                <a class="navbarPhoneLogo" href="index.html">
+                    <img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40">
+                </a>
+            </span>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="navbar-brand">Personal Website&nbsp</a></li>
-                <a href="index.html"><img src="personalLogo\personalLogoInverted.JPG" alt="Logo" width="40"></a>
+                <li><a class="navbar-brand">Tic-Tac-Toe&nbsp</a></li>
+                <a href="index.html"><img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40"></a>
             </ul>
-            </div>
+            </div> 
         </div>
         </nav>
 
-        <!-- Tic-tac-toe Section -->
+        <!-- Reversi Section-->
         <div id="personalProjects" class="projectContainer text-center">
-            <br>
-            <h3>Web Development | Personal Website</h3>
+            <h1>Web Development | Personal Website</h1>
             <div class="row">
-                <div class="col-sm-4">
-                    <img src="personalLogo\personalLogo.JPG" alt="Logo" width="40%">
-                    <br><br><br><br>
+                <div class="col-sm-4 center">
+                    <img src="Images/personalLogo/personalLogo.JPG" alt="Logo" width="40%" style="margin-top:25px;">
                 </div>
-                <div class="col-sm-8 text-left">
-                    <p class="text-left" style="margin-top:9%;padding-top:3%;padding-bottom:3%;padding-left:3%;padding-right:3%;border-radius:10px;background-color:#f2f2f2;">I had done quite a few interesting programming projects and have quite a few more planned. I wanted a place to store and present all these projects and a method of tracking my experiences in engineering. Thus, I coded this website using HTML, CSS, Javascript, and Bootstrap to keep track of my progress.</p>
+                <div class="col-sm-8 center">
+                    <p class="text-left" style="margin-top:9%;padding-top:3%;padding-bottom:3%;padding-left:3%;padding-right:3%;border-radius:10px;background-color:#f2f2f2;">I had done quite a few interesting programming projects and have more on the way. I wanted a place to store all these projects and a method of tracking my experiences in engineering. Thus, I coded this website using HTML, CSS, Javascript, and Bootstrap to keep track of my progress.</p>
                 </div>
             </div>
-            <hr style="height:2px;width:33%;text-align:center;color:#d69027;background-color:#d69027;border-color:#d69027">
 
+            <hr style="height:2px;width:40%;text-align:center;color:#d69027;background-color:#d69027;border-color:#d69027">
+            
             <!-- Container (Personal Projects Section) -->
             <div id="personalProjects" class="projectsContainer text-center">
                 <p>See some of my projects here!</p>
                 <br>
-
                 <div class="row">
-
-                <div class="col-sm-3">
-                </div>
-
-                <div class="col-sm-3">
-                <p class="text-center"><strong>Tic-Tac-Toe</strong></p> 
-                <div class="dropdown">
-                    <img src="homePageImgs\tictactoeImg.jpg" class="img-circle dropdown" alt="Tic-Tac-Toe" width=69%>
-                    <a href="tictactoe.html">
-                    <button class="button"></button>
-                    </a>
-                    <div class="dropdown-desc">
-                    <div class="desc">Classic Two-person Tic-Tac-Toe game.</div>
-                    </div>
-                    <br><br>
-                </div>
-                </div>
-
-                <div class="col-sm-3">
-                    <p class="text-center"><strong>Reversi</strong></p> 
-                    <div class="dropdown">
-                        <img src="homePageImgs\reversiImg.jpg" alt="Reversi" class="img-circle dropdown" width=58%>
-                        <a href="reversi.html">
-                        <button class="button"></button>
-                        </a>
-                        <div class="dropdown-desc">
-                        <div class="desc">Reversi chess game with AI implemented.</div>
+                    <div class="col-sm-4">
+                        <p class="text-center"><strong>Sudoku</strong></p> 
+                        <div class="dropdown">
+                            <img src="Images/homePageImgs/sudokuImg.jpg" alt="Sudoku" class="img-circle dropdown" width=58%>
+                            <a href="sudoku.html">
+                            <button class="button"></button>
+                            </a>
+                            <div class="dropdown-desc">
+                            <div class="desc">Sudoku puzzle game.<br>C, Python (Pygame)</div>
+                            </div>
+                            <br><br>
                         </div>
-                        <br><br>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <p class="text-center"><strong>Insider Trading Dashboard</strong></p> 
+                        <div class="dropdown">
+                            <img src="Images/homePageImgs/insiderTradeDB.jpg" alt="Insider Trading Dashboard" class="img-circle dropdown" width=58%>
+                            <a href="insiderTradeDB.html">
+                                <button class="button"></button>
+                            </a>
+                            <div class="dropdown-desc">
+                                <div class="desc">Insider trading dashboard.<br>Python (Pandas), Selenium, Tableau</div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <p class="text-center"><strong>Reversi</strong></p> 
+                        <div class="dropdown">
+                            <img src="Images/homePageImgs/reversiImg.jpg" alt="Reversi" class="img-circle dropdown" width=58%>
+                            <a href="reversi.html">
+                                <button class="button"></button>
+                            </a>
+                            <div class="dropdown-desc">
+                                <div class="desc">Reversi chess game with AI implemented.<br>C</div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
+                        <p class="text-center"><strong>Tic-Tac-Toe</strong></p> 
+                        <div class="dropdown">
+                            <img src="Images/homePageImgs/tictactoeImg.jpg" class="img-circle dropdown" alt="Tic-Tac-Toe" width=69%>
+                            <a href="tictactoe.html">
+                                <button class="button"></button>
+                            </a>
+                            <div class="dropdown-desc">
+                                <div class="desc">Classic Two-person Tic-Tac-Toe game.<br>Python: pygame</div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
                     </div>
                 </div>
 
-                <div class="col-sm-3">
-                </div>
             </div>
-            </div>
-
-            <br><br>
+            <br>
+        
             <a href="index.html">
                 <button class="homeBtn">HOME</button>
             </a>
         </div>
 
-        <!-- Contact Section-->
-        <div id="contact" class="contactContDark">
-        <div class=col-md-6>
-            <h3 class="text-left" style="font-size:20px;">Contact</h3>  
-            <p class="text-left"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;&nbsp;Greater Toronto Area, Canada</p>
-            <p class="text-left"><span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;&nbsp;Phone: +1 416 676 2901</p>
-            <p class="text-left"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;&nbsp;Email: eliss.hui@mail.utoronto.ca</p>
+        <!-- Container (Contact Section) -->
+        <div class="container" style="background:#2d2d30;width:100%;">
+            <div class=col-md-6>
+                <h3 class="text-left" style="letter-spacing:10px;color:#fff;font-size:20px;padding-top:3%;padding-left:25%;">Contact</h3>  
+                <br>
+                <p class="text-left" style="color:#fff;padding-left:25%;font-size:15px;">
+                    <span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;&nbsp;Greater Toronto Area, Canada
+                </p>
+                <p class="text-left" style="color:#fff;padding-left:25%;font-size:15px;">
+                    <span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;&nbsp;Phone: +1 416 676 2901
+                </p>
+                <p class="text-left" style="color:#fff;padding-left:25%;font-size:15px;">
+                    <span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;&nbsp;Email: eliss.hui@mail.utoronto.ca
+                </p>
+            </div>
+                <br><br>
+                <img class="contactLogo" src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo">
         </div>
-            <br><br>
-            <img class="contactLogo" src="personalLogo\personalLogoInverted.JPG" alt="Logo"> 
-        </div>
-        
-        <!-- Footer-->
+
+        <!-- Footer -->
         <footer class="text-center">
-        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To Top">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-        </a>
-        <br>
-        <p style="text-align:center;font-size:12px;letter-spacing:3px;padding-top:3px;">WEBSITE BY ELISS HUI, © 2022</p>
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <br>
+            <p style="text-align:center;font-size:12px;letter-spacing:3px;padding-top:3px;">WEBSITE BY ELISS HUI, © 2022</p>
         </footer>
-
-        <script>
-        $(document).ready(function(){
-        // Initialize Tooltip
-        $('[data-toggle="tooltip"]').tooltip(); 
-        
-        // Add smooth scrolling to all links in navbar + footer link
-        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 600, function(){
-        
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-            } // End if
-        });
-        })
-        </script>
     </body>
 </html>
