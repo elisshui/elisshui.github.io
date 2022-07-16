@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Eliss H. Hui</title>
+        <title>Eliss H. Hui - Sudoku</title>
         <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
@@ -16,13 +16,13 @@
         <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\Styles\projectPageStyle.css">
+        <link rel="stylesheet" href="Styles/projectPageStyle.css">
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="js/bootstrap-dropdownhover.min.js"></script>
 
-        <script src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\Scripts\projectPageScripts.js"></script>
+        <script src="Scripts/projectPageScript.js"></script>
     </head>
 
     <!-- Navigation bar Section-->
@@ -35,19 +35,19 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\index.html">
+                    <a class="navbar-brand" href="index.html">
                         Eliss H. Hui
                     </a>
                     <span style="float:right;">
-                        <a class="navbarPhoneLogo" href="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\index.html">
-                            <img src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\personalLogoInverted.JPG" alt="Logo" width="40">
+                        <a class="navbarPhoneLogo" href="index.html">
+                            <img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40">
                         </a>
                     </span>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="navbar-brand">Sudoku&nbsp</a></li>
-                        <a href="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\index.html"><img src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\personalLogoInverted.JPG" alt="Logo" width="40"></a>
+                        <a href="index.html"><img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40"></a>
                     </ul>
                 </div> 
             </div>
@@ -59,8 +59,8 @@
             <div class="row">
                 <div class="col-sm-4 gameVids">
                     <video width="92%" height="220" autoplay muted loop>
-                        <source src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\sudokuImgs\gameRecording.mp4" type="video/mp4">
-                        <source src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\sudokuImgs\gameRecording.mp4" type="video/ogg">
+                        <source src="Images/sudokuImgs/gameRecording.mp4" type="video/mp4">
+                        <source src="Images/sudokuImgs/gameRecording.mp4" type="video/ogg">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -77,8 +77,7 @@
                     </span>
                 </div>
             </div>
-
-            
+           
             <p><span style="font-weight:bold;font-size:20px;">Game Features and Project Goal</span><br>
                 With the GUI, players can choose to reset the board or view the answer at any point in the game. The game also features a comprehensive set of error-checking functions.
                 So, if the player makes an illegal move, a message explaining why the move was not allowed will be displayed. This is especially helpful if the player is new to
@@ -92,8 +91,7 @@
             <br>
 
             <hr class="dividerLine">
-
-            
+    
             <p><span style="font-weight:bold;font-size:20px;">Sudoku Board Algorithm</span><br>
                 As stated, the backtracking algorithm was used to create the Sudoku grid in C. However, when changing the code to Python, I utilized a different algorithm. This is seen
                 in the code block below.
@@ -179,24 +177,24 @@
 
             <div class="row text-center">
                 <div class="col-md-3 center">
-                    <img src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\sudokuImgs\errorCol.JPG" alt="Error-checking: Number exists in column." width="255">
+                    <img src="Images/sudokuImgs/errorCol.JPG" alt="Error-checking: Number exists in column." width="255">
                     <p>Figure 1. Error message 1:<br>Number already exists in column.</p>
                 </div>
                 <div class="col-md-3 center">
-                    <img src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\sudokuImgs\errorPreEx.JPG" alt="Error-checking: Attempting to change orginal numbers." width="255">
+                    <img src="Images/sudokuImgs/errorPreEx.JPG" alt="Error-checking: Attempting to change orginal numbers." width="255">
                     <p>Figure 2. Error message 2:<br>Attempting to change orginal numbers.</p>
                 </div>
                 <div class="col-md-3 center">
-                    <img src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\sudokuImgs\errorRowCol.JPG" alt="Error-checking: Number exists in row and column." width="255">
+                    <img src="Images/sudokuImgs/errorRowCol.JPG" alt="Error-checking: Number exists in row and column." width="255">
                     <p>Figure 3. Error message 3:<br>Number already exists in row and column.</p>
                 </div>
                 <div class="col-md-3 center">
-                    <img src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\sudokuImgs\errorSubGrid.JPG" alt="Error-checking: Number exists in sub-grid." width="255">
+                    <img src="Images/sudokuImgs/errorSubGrid.JPG" alt="Error-checking: Number exists in sub-grid." width="255">
                     <p>Figure 4. Error message 4:<br>Number already exists in sub-grid.</p>
                 </div>
             </div>
 
-            <a href="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\index.html">
+            <a href="index.html">
                 <button class="homeBtn">HOME</button>
             </a>
         </div>
@@ -217,7 +215,7 @@
                 </p>
             </div>
                 <br><br>
-                <img class="contactLogo" src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\personalLogoInverted.JPG" alt="Logo">
+                <img class="contactLogo" src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo">
         </div>
 
         <!-- Footer -->
