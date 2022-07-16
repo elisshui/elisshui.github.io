@@ -2,11 +2,12 @@
 <html lang="en">
     <head>
         <title>Eliss H. Hui</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
         <link rel="manifest" href="/site.webmanifest">
-        
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -15,185 +16,16 @@
         <link href="css/animate.min.css" rel="stylesheet">
         <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
 
+        <link rel="stylesheet" href="Styles/projectPageStyle.css">
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="js/bootstrap-dropdownhover.min.js"></script>
 
-        <style>
-            body {
-                font: 400 15px/1.8 Lato, sans-serif;
-                color: #777;
-            }
-            h3, h4 {
-                margin: 10px 0 30px 0;
-                letter-spacing: 10px;      
-                font-size: 20px;
-                color: #111;
-            }
-            /*container style*/
-            .projectContainer {
-                padding-right: 110px;
-                padding-left: 100px;
-                padding-top: 60px;
-                padding-bottom: 20px;
-            }
-            .projectContainer p{
-                font: 400 15px/1.8 Lato, sans-serif;
-                color: #777 !important;
-            }
-            @media (max-width: 991px){
-                .projectContainer p, .projectContainer{
-                font-size: 14px;
-                padding-left: 10px;
-                padding-right: 9px;
-                padding-bottom: 10px;
-                }
-            }
-
-            /*navBar style*/
-            .navbar {
-                font-family: Montserrat, sans-serif;
-                margin-bottom: 0;
-                background-color: #2d2d30;
-                border: 0;
-                font-size: 11px !important;
-                letter-spacing: 4px;
-                opacity: 1;
-            }
-            .navbar li a, .navbar .navbar-brand { 
-                color: #d5d5d5 !important;
-            }
-            .navbar-default .navbar-toggle {
-                border-color: transparent;
-            }
-            .navbar-brand:hover {
-                color: #fff !important;
-            }
-
-            /* home button */
-            .homeBtn {
-                position: sticky;
-                top: 100%;
-                left: 100%;
-
-                border: 6px 2d2d30;
-                border-radius: 3px;
-                background-color: white;
-                color: black;
-                padding: 2px 7px;
-                font-family: Montserrat, sans-serif;
-                font-size: 14px;
-                letter-spacing: 4px;
-                font-weight: bold;
-                cursor: pointer;
-                z-index: 4;
-            }
-            .homeBtn {
-                border-color: #2d2d30;
-                color: #2d2d30;
-            }
-            .homeBtn:hover {
-                background-color: #2d2d30;
-                color: white;
-            }
-            @media (max-width: 1000px){
-                .homeBtn {
-                position: sticky;
-                top: 85%;
-                left: 90%;
-                border: 1px 2d2d30 !important;
-                padding: 2px, 7px;
-                font-size: 10px;
-                letter-spacing: 3px;
-                }
-            }
-
-            /*Contact section bg-dark style*/
-            .contactContDark {
-                background: #2d2d30;
-                color: #bdbdbd;
-                width: 100%;
-                padding-top: 20px;
-                padding-bottom: 30px;
-                padding-left: 150px;
-                padding-right: 100px;
-            }
-            .contactContDark h3 {color: #fff;}
-            .contactContDark p {font-style: italic;}
-            @media (max-width: 991px) {
-                .contactLogo {
-                    display: none;
-                }
-                .contactContDark {
-                    width: 100%;
-                    padding-bottom: 0px;
-                    padding-left: 14%;
-                    padding-right: 0%;
-                }
-                .contactContDark p {
-                    font-size: 15px;
-                }
-                .contactContDark h3 {
-                    letter-spacing: 3px;
-                    font-size: 20px;
-                }
-            }
-            /*Logo in Contact Section*/
-            .contactLogo {
-                position: relative;
-                width: 7%;
-                left: 33%;
-            }
-            @media (max-width: 991px){
-                .contactLogo {
-                    display: none;
-                }
-                .container {
-                    width: 100%;
-                    padding-bottom: 5px;
-                    padding-left: 17%;
-                    padding-right: 0%;
-                }
-                .container p {
-                    font-size: 15px;
-                }
-                .container h3 {
-                    color: #2d2d30;
-                    letter-spacing: 3px;
-                    font-size: 20px;
-                }
-            }
-
-            /*footer style*/
-            footer {
-                background-color: #2d2d30;
-                color: #f5f5f5;
-                padding: 5px;
-                position: relative;
-                bottom: 0;
-                width: 100%;
-            }
-            footer h3, p{
-                color: #f5f5f5 !important;
-            }
-            footer a {
-                color: #f5f5f5;
-            }
-            footer a:hover {
-                color: #777;
-                text-decoration: none;
-            }  
-            .form-control {
-                border-radius: 0;
-            }
-            textarea {
-                resize: none;
-            }
-        </style>
+        <script src="Scripts/projectPageScript.js"></script>
     </head>
 
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
         <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -202,94 +34,107 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>                        
             </button>
-            <a class="navbar-brand" href="http://elisshui.epizy.com">
+            <a class="navbar-brand" href="index.html">
                 Eliss H. Hui
             </a>
+            <span style="float:right;">
+                <a class="navbarPhoneLogo" href="index.html">
+                    <img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40">
+                </a>
+            </span>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><a class="navbar-brand">TIC-TAC-TOE&nbsp</a></li>
-                <a href="http://elisshui.epizy.com"><img src="personalLogo\personalLogoInverted.JPG" alt="Logo" width="40"></a>
+                <li><a class="navbar-brand">Tic-Tac-Toe&nbsp</a></li>
+                <a href="index.html"><img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40"></a>
             </ul>
-            </div>
+            </div> 
         </div>
         </nav>
 
-        <!-- Tic-tac-toe Section -->
+        <!-- Reversi Section-->
         <div id="personalProjects" class="projectContainer text-center">
-            <br>
-            <h3>TIC-TAC-TOE</h3>
+            <h1>Tic-Tac-Toe</h1>
             <div class="row">
                 <div class="col-sm-4 center">
-                    <video width="420" height="375" autoplay muted loop>
-                        <source src="TicTacToeImgs\ticTacToeGamePlay.mp4" type="video/mp4">
-                        <source src="TicTacToeImgs\ticTacToeGamePlay.ogg" type="video/ogg">
-                        Your browser does not support the video tag.
-                    </video>
-                    <p>Figure 1. Tic-tac-toe game.</p>
+                    <img src="Images/TicTacToeImgs/ticTacToeGUI.JPG", alt="Tic-Tac-Toe Game" width="250">
+                    <p>Figure 1. Game Starting Screen</p>
                 </div>
-                <div class="col-sm-8 text-left">
-                <p>I coded the classic two-person Tic-Tac-Toe game using Python and pygame. The game features a simple graphical user interface to allow for ease of understanding as seen in the images.</p>
-                <p>As an extension to this project, I decided to create a "single-player" option. Selecting this option will guide the user to choose between an easy and hard level which they will then play. This extension is currently a work in progress.</p>
-                <hr style="height:2px;width:33%;text-align:center;color:#d69027;background-color:#d69027;border-color:#d69027">
-                <br><br><br><br><br>
+                <div class="col-sm-8 center">
+                    <p class="text-left" style="margin-top:9%;padding-top:3%;padding-bottom:3%;padding-left:3%;padding-right:3%;border-radius:10px;background-color:#f2f2f2;">I coded the classic two-person Tic-Tac-Toe game using Python and pygame. The game features a simple graphical user interface to allow for ease of understanding as seen in the images.<br><br>As an extension to this project, I decided to create a "single-player" option. Selecting this option will guide the user to choose between an easy and hard level which they will then play. This extension is currently a work in progress.</p>
+                    <span>
+                        <a href="https://github.com/elisshui/Tic-Tac-Toe/blob/main/Main.py">
+                            <button class="playGameBtn"><i class="fa fa-github"  data-toggle="tooltip" data-placement="bottom" title="See code!"></i></button>
+                        </a>
+                    </span>
                 </div>
             </div>
-            <a href="http://elisshui.epizy.com">
+
+            <hr style="height:2px;width:40%;text-align:center;color:#d69027;background-color:#d69027;border-color:#d69027">
+
+            <p class="text-center">The video below shows two people playing the game. Click <a href="https://github.com/elisshui/Tic-Tac-Toe/blob/main/Main.py">here</a> to see the code!<br></p>
+            <div class="row">
+                <div class="col-md-12 gameVids">
+                    <video width="400" height="375" autoplay muted loop>
+                        <source src="Images/TicTacToeImgs/ticTacToeGamePlay.mp4" type="video/mp4">
+                        <source src="Images/TicTacToeImgs/ticTacToeGamePlay.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>Figure 2. Playing the Game</p>
+                </div>
+            </div>
+
+            <hr style="height:2px;width:40%;text-align:center;color:#d69027;background-color:#d69027;border-color:#d69027">
+
+            <p style="text-align:left;">Error-checking functions were also implemented. When the players make an illegal move, a message is displayed in the command bar guiding the players. Some of these messages can be seen below.
+            </p>
+            <div class="row">
+                <div class="col-md-3 center">
+                </div>
+                <div class="col-md-3 center">
+                    <img src="Images/TicTacToeImgs/takenSquareOError.JPG" alt="Space Taken (O's turn) Error-checking" width="250">
+                    <p>Figure 3. Error message when an occupied square is selected (O's turn). "O" is prompted to choose another square.</p>
+                </div>
+                <div class="col-md-3 center">
+                    <img src="Images/TicTacToeImgs/takenSquareXError.JPG" alt="Space Taken (X's turn) Error-checking" width="250">
+                    <p>Figure 4. Error message when an occupied square is selected (X's turn). "X" is prompted to choose another square.</p>
+                </div>
+                <div class="col-md-3 center">
+                </div>
+            </div>
+            <br>
+        
+            <a href="index.html">
                 <button class="homeBtn">HOME</button>
             </a>
         </div>
 
-        <!-- Contact Section -->
-        <div id="contact" class="contactContDark">
-        <div class=col-md-6>
-            <h3 class="text-left">Contact</h3>  
-            <p class="text-left"><span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;&nbsp;Greater Toronto Area, Canada</p>
-            <p class="text-left"><span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;&nbsp;Phone: +1 416 676 2901</p>
-            <p class="text-left"><span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;&nbsp;Email: eliss.hui@mail.utoronto.ca</p>
-        </div>
-            <br><br>
-            <img class="contactLogo" src="personalLogo\personalLogoInverted.JPG" alt="Logo"> 
+        <!-- Container (Contact Section) -->
+        <div class="container" style="background:#2d2d30;width:100%;">
+            <div class=col-md-6>
+                <h3 class="text-left" style="letter-spacing:10px;color:#fff;font-size:20px;padding-top:3%;padding-left:25%;">Contact</h3>  
+                <br>
+                <p class="text-left" style="color:#fff;padding-left:25%;font-size:15px;">
+                    <span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;&nbsp;Greater Toronto Area, Canada
+                </p>
+                <p class="text-left" style="color:#fff;padding-left:25%;font-size:15px;">
+                    <span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;&nbsp;Phone: +1 416 676 2901
+                </p>
+                <p class="text-left" style="color:#fff;padding-left:25%;font-size:15px;">
+                    <span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;&nbsp;Email: eliss.hui@mail.utoronto.ca
+                </p>
+            </div>
+                <br><br>
+                <img class="contactLogo" src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo">
         </div>
 
         <!-- Footer -->
         <footer class="text-center">
-        <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To Top">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-        </a>
-        <br>
-        <p style="text-align:center;font-size:12px;letter-spacing:3px;padding-top:3px;">WEBSITE BY ELISS HUI, © 2022</p>
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <br>
+            <p style="text-align:center;font-size:12px;letter-spacing:3px;padding-top:3px;">WEBSITE BY ELISS HUI, © 2022</p>
         </footer>
-
-        <script>
-        $(document).ready(function(){
-        // Initialize Tooltip
-        $('[data-toggle="tooltip"]').tooltip(); 
-        
-        // Add smooth scrolling to all links in navbar + footer link
-        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 600, function(){
-        
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-            } // End if
-        });
-        })
-        </script>
     </body>
 </html>
