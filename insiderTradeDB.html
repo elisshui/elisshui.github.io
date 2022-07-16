@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Eliss H. Hui - Insider Trading Dashboard</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/bootstrap-dropdownhover.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="Styles/projectPageStyle.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap-dropdownhover.min.js"></script>
+
+        <script src="Scripts/projectPageScript.js"></script>
+    </head>
+
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">
+                Eliss H. Hui
+            </a>
+            <span style="float:right;">
+                <a class="navbarPhoneLogo" href="index.html">
+                    <img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40">
+                </a>
+            </span>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-brand">Insider Trading Dashboard&nbsp</a></li>
+                <a href="index.html"><img src="Images/personalLogo/personalLogoInverted.JPG" alt="Logo" width="40"></a>
+            </ul>
+            </div> 
+        </div>
+        </nav>
+
+        <!-- Intro Section-->
+        <div id="personalProjects" class="projectContainer text-center">
+            <h1>Insider Trading Dashboard</h1>
+            <div class="row">
+                <div class="col-sm-6 center">
+                    <img src="Images/insiderTradingDBImgs/tradingDashboard.JPG", alt="Insider Trading Dashboard" width="100%">
+                </div>
+                <div class="col-sm-6 center">
+                    <p class="introTextBox">
+                        Insider trading data is obtained via information disclosed in the U.S. SEC's Form 4. Directors, officers, or owners of more than 10% of any class of a company's securities are defined as "insiders". Thus, are required to fill out the form two-busniess days following a transaction involving their respective company. This data is made public through various insider trading websites and provides investors with useful information pertaining to the performance or prospects of the company.
+                        <br><br>
+                        This project involved scraping insider trading data from <a href="insidearbitrage.com/insider-sales/?desk=yes">Insider Arbitrage</a>. At first, Selenium was used for web scraping. However Python's Pandas library was found to be more efficient in completing the scrape. Thus, the data was then cleaned and processed using the <i>pandas</i> and <i>pandas_datareader</i> libraries. Finally, a fully automated dashboard was created using Tableau.
+                    </p>
+                    <span>
+                        <a href="https://github.com/elisshui/InsiderTradingDashboard">
+                            <button class="playGameBtn"><i class="fa fa-github"  data-toggle="tooltip" data-placement="bottom" title="See code!"></i></button>
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <hr class="dividerLine">
+
+            <h2>Web Scraping with Pandas</h2>
+            <p class="bodyText">To obtain the data from <a href="insidearbitrage.com/insider-sales/?desk=yes">Insider Arbitrage</a>, I wrote a function: <i>getSells()</i> to complete this. The code block below shows a snip of code from the function. This code locates the position of the data needed in the page's html.</p>
+            <code class="codeBlock">
+                url = f"https://www.insidearbitrage.com/insider-{tr}/?desk=yes&pagenum={i+1}"<span style="color: #5F9EA0"> #url of website for certain transaction, page</span><br>
+                df = pd.read_html(url)<span style="color: #5F9EA0"> #reads the html</span><br>
+                df = df[0]<br>
+                columns = df.iloc[0]<span style="color: #5F9EA0"> #locating each column in data</span><br>
+                df.columns = columns<span style="color: #5F9EA0"> #assign columns to the dataframe</span><br>
+                df = df[1:]<span style="color: #5F9EA0"> #only want rows from 1st index and lower</span><br>
+            </code><br>
+            <p class="bodyText">
+                The data in the section located as per the above code was then put into a dataframe and then, a csv file. This was all done using the pandas library.
+            </p>
+
+            <hr class="dividerLine">
+
+            <h2>Calculating Moving Average</h2>
+            <p class="bodyText">
+                A dictionary called <i>infoDict</i> was created to store the stock's ticker, current price, and moving average. As seen below, the <i>getInfo()</i> function was utilized to calculate the current price and moving average.
+            </p>
+
+            <code class="codeBlock">
+                <span style="color:	#0096FF">def</span> getInfo(ticker, nPeriods):<span style="color: #5F9EA0"> #get current stock price -> will calculate MA</span><br>
+                    &nbsp;&nbsp;&nbsp;try:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tickerDf = dr.data.get_data_yahoo(ticker,start = date.today() - timedelta(300) , end = date.today())<span style="color: #5F9EA0"> #creating a dataframe containing the tickers, past 300 days</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentPrice = tickerDf.iloc[-1]['Close']<span style="color: #5F9EA0"> #getting last row - current closing price</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MA = pd.Series(tickerDf["Close"].rolling(nPeriods, min_periods=0).mean(), name = 'MA')<span style="color: #5F9EA0"> #calculating moving average: rolling = rolling sum, calc mean and name value MA</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentMA = MA[-1]<span style="color: #5F9EA0"> #last row = the current MA</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return (currentPrice, currentMA)<span style="color: #5F9EA0"> #return tuple</span><br>
+                    &nbsp;&nbsp;&nbsp;except:<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return ('N/A', 'N/A')<span style="color: #5F9EA0"> #if error occurs, return N/A for price and MA</span><br>
+            </code><br>
+            <p class="bodyText">
+                The functions <i>getPrice()</i> and <i>getMA()</i> were used to assign a ticker its respective values in the dictionary, <i>infoDict</i>.
+            </p>
+
+            <hr class="dividerLine">
+
+            <h2>Scraping Stock Sectors and Automating Python Script</h2>
+            <p class="bodyText">
+            The different stock sectors in the U.S. Stock Market as per <a href = "https://www.tradingview.com/markets/stocks-usa/sectorandindustry-industry/">tradingview.com</a> were scraped and placed into another csv file using a Jupyter Notebook. A batch file as well as the Windows Task Scheduler were used to automate the data scraping process. Thus, the batch file seen below will run everyday at 9:00am, refreshing the csv files and hence, the Tableau dashboard.
+            </p>
+
+            <code class="codeBlock">
+                <span style="color:	#C70039">@ECHO OFF</span><br>
+                <span style="color:	#C70039">ECHO</span> Starting script<br>
+                cd <i>---------------file location------------------</i><br>
+                insiderVenv\Scripts\python.exe Prices.py<br>
+                <span style="color:	#C70039">ECHO</span> Script Ran Successfully<br>
+                PAUSE  
+            </code>
+
+            <hr class="dividerLine">
+
+            <h2>Creating the Dashboard</h2>
+
+            <p class="bodyText">
+                Tableau was used to join the stock sector csv file with the scraped data csv file. KPIs, a stock heat map, and a sector tree map were created. These were all put together to create a dashboard.<br><br>
+            </p>
+
+            <img src="Images/insiderTradingDBImgs/tradingDashboard.JPG", alt="Insider Trading Dashboard" width="950">
+
+            <br><br>
+
+
+            <a href="index.html">
+                <button class="homeBtn">HOME</button>
+            </a>
+        </div>
+
+        <!-- Container (Contact Section) -->
+        <div class="container">
+            <div class=col-md-6>
+                <h3 class="text-left contactContHeading">Contact</h3> 
+                <br>
+                <p class="text-left contactDetails">
+                    <span class="glyphicon glyphicon-map-marker"></span>&nbsp;&nbsp;&nbsp;Greater Toronto Area, Canada
+                </p>
+                <p class="text-left contactDetails">
+                    <span class="glyphicon glyphicon-phone"></span>&nbsp;&nbsp;&nbsp;Phone: +1 416 676 2901
+                </p>
+                <p class="text-left contactDetails">
+                    <span class="glyphicon glyphicon-envelope"></span>&nbsp;&nbsp;&nbsp;Email: eliss.hui@mail.utoronto.ca
+                </p>
+            </div>
+                <br><br>
+                <img class="contactLogo" src="C:\Users\Eliss Hui\Documents\Personal Programming\PersonalWebsite\personalLogoInverted.JPG" alt="Logo">
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+            <br>
+            <p style="text-align:center;font-size:12px;letter-spacing:3px;padding-top:3px;">WEBSITE BY ELISS HUI, © 2022</p>
+        </footer>
+    </body>
+</html>
