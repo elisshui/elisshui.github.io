@@ -147,7 +147,11 @@ h3, h4 {
         font-size: 13px;
     }
 }
-
+/*contact container*/
+.container {
+    padding-top: 5%;
+    padding-bottom: 5%
+}
 /*Logo in Contact Section*/
 .contactLogo {
     position: relative;
@@ -160,6 +164,7 @@ h3, h4 {
     }
     .container {
         width: 100%;
+        padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 17%;
         padding-right: 0%;
