@@ -218,9 +218,10 @@ h1 { /*Page Title*/
     width:100%;
 }
 .text-left.contactContHeading {
-    letter-spacing: 3px;
-    color: #fff;
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
     font-size: 20px;
+    color: #111;
     padding-top: 3%;
     padding-left: 25.5%;
 }
@@ -248,8 +249,12 @@ h1 { /*Page Title*/
         padding-left: 5%;
         padding-right: 0%;
     }
-    .text-left.contactContHeading, .text-left.contactDetails {
+    .text-left.contactContHeading {
         padding-left: 0px;
+    }
+    .text-left.contactDetails {
+        padding-left: 0px;
+        font-size: 15px;
     }
 }
 
