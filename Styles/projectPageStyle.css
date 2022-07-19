@@ -230,7 +230,11 @@ h1 { /*Page Title*/
         display: none;
     }
     .container {
-        padding-left:15%;
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 17%;
+        padding-right: 0%;
     }
 }
 
