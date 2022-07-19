@@ -229,7 +229,7 @@ h1 { /*Page Title*/
     .contactLogo {
         display: none;
     }
-    .text-left.contactDetails, .text-left.contactContHeading {
+    .container {
         padding-left:15%;
     }
 }
