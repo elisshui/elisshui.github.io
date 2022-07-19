@@ -4,6 +4,14 @@ h1 { /*Page Title*/
     font-size: 20px;
     color: #111;
 }
+@media (max-width: 991px){
+    h1 {
+        margin: 10px 0 30px 0;
+        letter-spacing: 10px;      
+        font-size: 15px;
+        color: #111;
+    }
+}
 
 /*whole page container style*/
 .projectContainer {
