@@ -218,10 +218,10 @@ h1 { /*Page Title*/
     width:100%;
 }
 .text-left.contactContHeading {
-    margin: 10px 0 30px 0;
+    margin: 10px 0 10px 0;
     letter-spacing: 10px;      
     font-size: 20px;
-    color: #111;
+    color: #fff;
     padding-top: 3%;
     padding-left: 25.5%;
 }
