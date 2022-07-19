@@ -208,14 +208,14 @@ h1 { /*Page Title*/
 .text-left.contactContHeading {
     letter-spacing: 10px;
     color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     padding-top: 3%;
     padding-left: 25.5%;
 }
 .text-left.contactDetails {
     color:#d5d5d5;
     padding-left:25%;
-    font-size:15px;
+    font-size:13px;
     letter-spacing:0.5px;
 }
 /*logo in contact container*/
