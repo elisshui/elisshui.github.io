@@ -164,16 +164,15 @@ h3, h4 {
     }
     .container {
         width: 100%;
+        padding-top: 5px;
         padding-bottom: 3%;
         padding-left: 17%;
         padding-right: 0%;
     }
     .container p {
-        padding-top: 3%;
         font-size: 15px;
     }
     .container h3 {
-        padding-top: 3%;
         color: #2d2d30;
         letter-spacing: 3px;
         font-size: 20px;
