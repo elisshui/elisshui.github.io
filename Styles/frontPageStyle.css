@@ -150,7 +150,7 @@ h3, h4 {
 /*contact container*/
 .container {
     padding-top: 3%;
-    padding-bottom: 3%
+    padding-bottom: 3%;
 }
 /*Logo in Contact Section*/
 .contactLogo {
@@ -164,8 +164,8 @@ h3, h4 {
     }
     .container {
         width: 100%;
-        padding-top: 5%;
-        padding-bottom: 5px;
+        padding-top: 3%;
+        padding-bottom: 3%;
         padding-left: 17%;
         padding-right: 0%;
     }
