@@ -235,6 +235,9 @@ h1 { /*Page Title*/
         padding-left: 5%;
         padding-right: 0%;
     }
+    .text-left.contactContHeading, .text-left.contactDetails {
+        padding-left: 0px;
+    }
 }
 
 /*footer style*/
