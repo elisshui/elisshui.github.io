@@ -101,7 +101,7 @@ h1 { /*Page Title*/
     border-color: transparent;
 }
 .navbar li a, .navbar .navbar-brand { 
-    color: #2d2d30 !important;
+    color: #d5d5d5 !important;
 }
 .navbar-brand:hover {
     color: #fff !important;
