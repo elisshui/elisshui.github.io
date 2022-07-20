@@ -91,14 +91,17 @@ h1 { /*Page Title*/
 .navbar {
     font-family: Montserrat, sans-serif;
     margin-bottom: 0;
-    background-color: #2d2d30;
+    background-color: #2d2d30 !important;
     border: 0;
     font-size: 11px !important;
     letter-spacing: 4px;
     opacity: 1;
 }
-.navbar li a, .navbar .navbar-brand { 
+.navbar li a, .navbar-brand { 
     color: #d5d5d5 !important;
+}
+.navbar .navbar-brand {
+    background-color: #2d2d30 !important;
 }
 .navbar-default .navbar-toggle {
     border-color: transparent;
@@ -250,11 +253,10 @@ h1 { /*Page Title*/
         padding-right: 0%;
     }
     .text-left.contactContHeading {
-        padding-left: 5px;
+        padding-left: 0px;
     }
     .text-left.contactDetails {
-        padding-left: 5px;
-        padding-bottom: 0px;
+        padding-left: 0px;
         font-size: 15px;
     }
 }
@@ -280,9 +282,4 @@ footer a:hover {
 }
 textarea {
     resize: none;
-}
-@media (max-width:991px) {
-    footer {
-        padding-top: 0px;
-    }
 }
