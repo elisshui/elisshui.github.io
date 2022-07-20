@@ -97,9 +97,6 @@ h1 { /*Page Title*/
     letter-spacing: 4px;
     opacity: 1;
 }
-.navbar li a, .navbar .navbar-brand { 
-    color: #d5d5d5 !important;
-}
 .navbar-default .navbar-toggle {
     border-color: transparent;
 }
