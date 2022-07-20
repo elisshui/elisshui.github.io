@@ -100,6 +100,9 @@ h1 { /*Page Title*/
 .navbar-default .navbar-toggle {
     border-color: transparent;
 }
+.navbar li a, .navbar .navbar-brand { 
+    color: #2d2d30 !important;
+}
 .navbar-brand:hover {
     color: #fff !important;
 }
