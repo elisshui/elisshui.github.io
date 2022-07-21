@@ -147,6 +147,46 @@ h3, h4 {
         font-size: 13px;
     }
 }
+
+/* home button */
+.homeBtn {
+    position: sticky;
+    bottom: 2%; /*dist from bottom*/
+    left: 100%;
+    margin-bottom: 10px; /*dist from bottom when sticks*/
+
+    border: 6px 2d2d30;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    padding: 2px 7px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 4;
+}
+.homeBtn {
+    border-color: #2d2d30;
+    color: #2d2d30;
+}
+.homeBtn:hover {
+    background-color: #2d2d30;
+    color: white;
+}
+@media (max-width: 1000px){
+    .homeBtn {
+    position: sticky;
+    margin-bottom: 1px;
+    left: 90%;
+    border: 1px 2d2d30 !important;
+    padding: 2px, 7px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    }
+}
+
 /*contact container*/
 .container {
     padding-top: 2%;
