@@ -148,8 +148,8 @@ h3, h4 {
     }
 }
 
-/* home button */
-.homeBtn {
+/* resume button */
+.resumeBtn {
     position: sticky;
     bottom: 2%; /*dist from bottom*/
     left: 100%;
@@ -167,16 +167,16 @@ h3, h4 {
     cursor: pointer;
     z-index: 4;
 }
-.homeBtn {
+.resumeBtn {
     border-color: #2d2d30;
     color: #2d2d30;
 }
-.homeBtn:hover {
+.resumeBtn:hover {
     background-color: #2d2d30;
     color: white;
 }
 @media (max-width: 1000px){
-    .homeBtn {
+    .resumeBtn {
     position: sticky;
     margin-bottom: 1px;
     left: 90%;
