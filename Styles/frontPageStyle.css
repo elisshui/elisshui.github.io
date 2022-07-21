@@ -149,7 +149,8 @@ h3, h4 {
 @media (max-width: 991px) { /*tablets*/
     .linksCont {
         margin-top: -33%;
-        height: 68%;
+        height: 73%;
+        position: sticky;
     }
     .resumeBtn {
         margin-top: 12px;
