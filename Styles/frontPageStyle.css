@@ -146,11 +146,10 @@ h3, h4 {
     background-color: #2d2d30;
     opacity: 1;
 }
-@media (max-width: 991px) { /*phones*/
+@media (max-width: 991px) { /*tablets*/
     .linksCont {
         margin-top: -33%;
-        height: 60%;
-        position: sticky;
+        height: 68%;
     }
     .resumeBtn {
         margin-top: 12px;
@@ -166,15 +165,14 @@ h3, h4 {
     .linksCont {
         margin-top: -37%;
         height: 55%;
-        position: sticky;
     }
     .resumeBtn {
         margin-top: 12px;
-        height: 16px;
+        height: 12px;
     }
     .gitHubBtn, .linkedInBtn {
         margin-top: 8px;
-        height: 15px;
+        height: 10px;
     }
 }
 
