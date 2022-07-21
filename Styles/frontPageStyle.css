@@ -149,7 +149,7 @@ h3, h4 {
 @media (max-width: 991px) { /*phones*/
     .linksCont {
         margin-top: -33%;
-        height: 55%;
+        height: 60%;
         position: sticky;
     }
     .resumeBtn {
@@ -158,23 +158,23 @@ h3, h4 {
     }
     .gitHubBtn, .linkedInBtn {
         margin-top: 8px;
-        height: 20px;
+        height: 25px;
     }
 }
 
 @media (max-width: 691px) { /*phones*/
     .linksCont {
-        margin-top: -33%;
+        margin-top: -37%;
         height: 55%;
         position: sticky;
     }
     .resumeBtn {
         margin-top: 12px;
-        height: 26px;
+        height: 16px;
     }
     .gitHubBtn, .linkedInBtn {
         margin-top: 8px;
-        height: 20px;
+        height: 15px;
     }
 }
 
