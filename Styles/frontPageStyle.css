@@ -147,6 +147,22 @@ h3, h4 {
     opacity: 1;
 }
 
+@media (max-width: 991px) { /*phones*/
+    .linksCont {
+        margin-top: -33%;
+        height: 55%;
+        position: sticky;
+    }
+    .resumeBtn {
+        margin-top: 12px;
+        height: 36px;
+    }
+    .gitHubBtn, .linkedInBtn {
+        margin-top: 8px;
+        height: 30px;
+    }
+}
+
 /*Experience section container*/
 .containerExperience {
     padding-right: 15%;
