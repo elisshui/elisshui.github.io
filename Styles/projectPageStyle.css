@@ -241,7 +241,29 @@ h1 { /*Page Title*/
     margin-top: 2%;
     left: 25%;
 }
-@media (max-width:991px) { /*Tablets and phones*/
+@media (max-width: 991px) { /*Tablets*/
+    .contactLogo {
+        position: relative;
+        width: 9%;
+        left: 67%;
+        margin-top: -35.5%;
+    }
+    .container {
+        width: 100%;
+        padding-top: 5px;
+        padding-bottom: -15%;
+        padding-left: 15%;
+        padding-right: 0%;
+    }
+    .text-left.contactContHeading {
+        padding-left: 0px;
+    }
+    .text-left.contactDetails {
+        padding-left: 0px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 650px) { /*Phones*/
     .contactLogo {
         display: none;
     }
