@@ -231,14 +231,20 @@ h3, h4 {
     left: 33%;
 }
 @media (max-width: 991px) {
+    .contactLogo {
+        position: relative;
+        width: 9%;
+        left: 67%;
+        margin-top: -35.5%;
+    }
     .container {
         width: 100%;
         padding-top: 5%;
-        padding-left: 17%;
+        padding-left: 10%;
         padding-right: 0%;
+        padding-bottom: -10%;
     }
     .container p {
-        padding-bottom: -5px;
         font-size: 15px;
     }
     .container h3 {
@@ -249,7 +255,7 @@ h3, h4 {
     }
 }
 
-@media (max-width: 500px){ /*phones*/
+@media (max-width: 650px){ /*phones*/
     .contactLogo {
         display: none;
     }
