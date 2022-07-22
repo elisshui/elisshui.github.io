@@ -109,6 +109,7 @@ h3, h4 {
     margin-top: -32%;
     left: 0px;
     width: 42px;
+
     height: 175px;
     background-color: #2d2d30;
     opacity: 0.94;
@@ -149,6 +150,29 @@ h3, h4 {
 @media (max-width: 800px) { /*small tablets*/
     .linksCont {
         margin-top: -40%;
+    }
+}
+@media (max-width: 500px) { /*phones*/
+    .linksCont {
+        margin-top: -40%;
+        width: 34px;
+        height: 113px;
+
+    }   
+    .resumeBtn {
+        margin-left: 3px;
+        width: 22px;
+        margin-top: 8px;
+    }
+    .linkedInBtn {
+        width: 20px; 
+        height: 20px;
+        margin-top: 5px;      
+    }
+    .gitHubBtn {
+        width: 20px;
+        height: 20px;
+        margin-top: 5px;
     }
 }
 
