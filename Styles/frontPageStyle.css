@@ -233,9 +233,9 @@ h3, h4 {
 @media (max-width: 991px) {
     .contactLogo {
         position: relative;
-        width: 9%;
-        left: 67%;
-        margin-top: -37%;
+        width: 11%;
+        left: 65%;
+        margin-top: -43%;
     }
     .container {
         width: 100%;
