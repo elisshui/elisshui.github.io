@@ -61,7 +61,10 @@
                 </div>
                 <div class="col-sm-6 center">
                     <p class="introTextBox">
-                        Insider trading data is obtained via information disclosed in the U.S. SEC's Form 4. Directors, officers, or owners of more than 10% of any class of a company's securities are defined as "insiders". Thus, are required to fill out the form two-busniess days following a transaction involving their respective company. This data is made public through various insider trading websites and provides investors with useful information pertaining to the performance or prospects of the company.
+                        Insider trading data is obtained via information disclosed in the U.S. SEC's Form 4. Directors, officers, or owners of more than 10% of any 
+                        class of a company's securities are defined as "insiders". Thus, are required to fill out the form two business days following a transaction 
+                        involving their respective company. This data is made public through various insider trading websites and provides investors with useful 
+                        information pertaining to the performance or prospects of the company.
                         <br><br>
                         This project involved scraping insider trading data from <a href="insidearbitrage.com/insider-sales/?desk=yes">Insider Arbitrage</a>. At first, Selenium was used for web scraping. However Python's Pandas library was found to be more efficient in completing the scrape. Thus, the data was then cleaned and processed using the <i>pandas</i> and <i>pandas_datareader</i> libraries. Finally, a fully automated dashboard was created using Tableau.
                     </p>
@@ -77,7 +80,7 @@
 
             <p><span style="font-weight:bold;font-size:20px;">Web Scraping with Pandas</span><br>
                 To obtain the data from <a href="insidearbitrage.com/insider-sales/?desk=yes">Insider Arbitrage</a>, I wrote a function: <i>getSells()</i> to complete 
-                this. The code block below shows a snip of code from the function. This code locates the position of the data needed in the page's html.
+                this. The code block below shows a snip of code from the function. This code locates the position of the data needed in the page's HTML.
             </p>
             <code class="codeBlock">
                 url = f"https://www.insidearbitrage.com/insider-{tr}/?desk=yes&pagenum={i+1}"<span style="color: #5F9EA0"> #url of website for certain transaction, page</span><br>
@@ -88,7 +91,7 @@
                 df = df[1:]<span style="color: #5F9EA0"> #only want rows from 1st index and lower</span><br>
             </code><br>
             <p>
-                The data in the section located as per the above code was then put into a dataframe and then, a csv file. This was all done using the pandas library.
+                The data in the section located as per the above code was then put into a data frame and then, a CSV file. This was all done using the pandas library.
             </p>
 
             <hr class="dividerLine">
@@ -118,8 +121,8 @@
             <p><span style="font-weight:bold;font-size:20px;">Scraping Stock Sectors and Automating Python Script</span><br>
                 The different stock sectors in the U.S. Stock Market as per 
                 <a href = "https://www.tradingview.com/markets/stocks-usa/sectorandindustry-industry/">tradingview.com</a> were scraped and placed into another csv 
-                file using a Jupyter Notebook. A batch file as well as the Windows Task Scheduler were used to automate the data scraping process. Thus, the batch 
-                file seen below will run everyday at 9:00am, refreshing the csv files and hence, the Tableau dashboard.
+                file using a Jupyter Notebook. A batch file, as well as the Windows Task Scheduler, were used to automate the data scraping process. Thus, the batch 
+                file seen below will run every day at 9:00 am, refreshing the CSV files and hence, the Tableau dashboard.
             </p>
 
             <code class="codeBlock">
@@ -134,7 +137,7 @@
             <hr class="dividerLine">
 
             <p><span style="font-weight:bold;font-size:20px;">Creating the Dashboard</span><br>
-                Tableau was used to join the stock sector csv file with the scraped data csv file. KPIs, a stock heat map, and a sector tree map were created. 
+                Tableau was used to join the stock sector CSV file with the scraped data CSV file. KPIs, a stock heat map, and a sector tree map were created. 
                 These were all put together to create a dashboard.<br><br>
             </p>
 
