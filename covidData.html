@@ -117,10 +117,10 @@
                 The <i>create view</i> query below created a view that displayed the total death count per continent.
             </p>
             <code class="codeBlock">
-                <span style="color: #0096FF">Create View</span> deathCntPerLoc <span style="color: #0096FF">as</span>
-                <span style="color: #0096FF">SELECT</span> continent, <span style="color: #8510d8">MAX</span>(<span style="color: #8510d8">cast</span>(Total_deaths as int)) <span style="color: #0096FF">as</span> "totalDeathCount"
-                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">FROM</span> COVIDAnalysis..covidDeaths
-                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">WHERE</span> continent <span style="color: #747474">is not NULL</span>
+                <span style="color: #0096FF">Create View</span> deathCntPerLoc <span style="color: #0096FF">as</span><br>
+                <span style="color: #0096FF">SELECT</span> continent, <span style="color: #8510d8">MAX</span>(<span style="color: #8510d8">cast</span>(Total_deaths as int)) <span style="color: #0096FF">as</span> "totalDeathCount"<br>
+                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">FROM</span> COVIDAnalysis..covidDeaths<br>
+                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">WHERE</span> continent <span style="color: #747474">is not NULL</span><br>
                 &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">GROUP BY</span> continent
             </code>
             <br>
