@@ -79,7 +79,7 @@
             <hr class="dividerLine">
             <p><span style="font-weight:bold;font-size:20px;">Exploring the Data Set</span><br>
                 I used Microsoft SQL Server to look into the changes in COVID-19 cases and deaths over time. I was particularly interested in how the number of cases
-                varied with population size and country.
+                varied with population size and country. For example, the query below gave me the percentage of the UK's population infected over time.
             </p>
             <code class="codeBlock">
                 <span style="color: #0096FF">SELECT</span> Location, Date, population, total_cases, (total_cases/population)*100 as "PercentPopInfected"<br> 
@@ -88,9 +88,28 @@
                  &nbsp;&nbsp;&nbsp;and continent is not NULL<br>
                  &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">ORDER BY</span> 1,2<br>
             </code>
-
+            <br>
+            <p>
+                Using a CTE, I explored the rate of change in the percentage of population vaccinated per country. This query is displayed in the code block below.
+            </p>
+            <code class="codeBlock">
+                <span style="color: #0096FF">WITH</span> popVsVac(continent, location, date, population, new_vaccinations, vacRollingCount)<br>
+                as<br>
+                (<br>
+                <span style="color: #0096FF">SELECT</span> Dth.continent, Dth.location, Dth.date, Dth.population, Vac.new_vaccinations<br>
+                , SUM(CONVERT(bigint, Vac.new_vaccinations)) <span style="color: #0096FF">OVER</span> (<span style="color: #0096FF">Partition by</span> Dth.location <span style="color: #0096FF">ORDER BY</span> Dth.location, Dth.date) as "vacRollingCount"<br>
+                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">FROM</span> COVIDAnalysis..covidDeaths Dth<br>
+                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">JOIN</span> COVIDAnalysis..covidVaccinations Vac<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0096FF">ON</span> Dth.location = Vac.location<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and Dth.date = Vac.date<br>
+                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">WHERE</span> Dth.continent is not NULL<br>
+                )<br>
+                <br>
+                <span style="color: #0096FF">SELECT</span> *, (vacRollingCount/population)*100 as "percentVaccinated"<br>
+                &nbsp;&nbsp;&nbsp;<span style="color: #0096FF">FROM</span> popVsVac
+            </code>
+            <br>
             <hr class="dividerLine">
-
             <p><span style="font-weight:bold;font-size:20px;">Creating the Dashboard</span><br>
                 Tableau...
             </p>
