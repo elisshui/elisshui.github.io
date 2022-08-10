@@ -77,10 +77,21 @@
             </div>
 
             <hr class="dividerLine">
+            <p><span style="font-weight:bold;font-size:20px;">Exploring the Data Set</span><br>
+                I used Microsoft SQL Server to look into the changes in COVID-19 cases and deaths over time. I was particularly interested in how the number of cases
+                varied with population size and country.
+            </p>
+            <code class="codeBlock">
+                <span style="color:	#0096FF">SELECT</span> Location, Date, population, total_cases, (total_cases/population)*100 as "PercentPopInfected" 
+                    <span style="color:	#0096FF">FROM</span> COVIDAnalysis..covidDeaths
+                    <span style="color:	#0096FF">WHERE</span> location like <span style="color: #C70039">'%Kingdom'</span>
+                    and continent is not NULL
+                        <span style="color:	#0096FF">ORDER BY</span> 1,2
+            </code>
 
             <hr class="dividerLine">
 
-            <p><span style="font-weight:bold;font-size:20px;">Creating the Dashboard</span>
+            <p><span style="font-weight:bold;font-size:20px;">Creating the Dashboard</span><br>
                 Tableau...
             </p>
 
